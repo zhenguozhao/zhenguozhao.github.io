@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-    <id>http://zhenguozhao.github.io</id>
+    <id>http://note.zhenguozhao.tech</id>
     <title>zhenguozhao</title>
-    <updated>2020-03-07T19:22:23.468Z</updated>
+    <updated>2020-03-07T20:00:43.367Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
-    <link rel="alternate" href="http://zhenguozhao.github.io"/>
-    <link rel="self" href="http://zhenguozhao.github.io/atom.xml"/>
+    <link rel="alternate" href="http://note.zhenguozhao.tech"/>
+    <link rel="self" href="http://note.zhenguozhao.tech/atom.xml"/>
     <subtitle>温故而知新</subtitle>
-    <logo>http://zhenguozhao.github.io/images/avatar.png</logo>
-    <icon>http://zhenguozhao.github.io/favicon.ico</icon>
+    <logo>http://note.zhenguozhao.tech/images/avatar.png</logo>
+    <icon>http://note.zhenguozhao.tech/favicon.ico</icon>
     <rights>All rights reserved 2020, zhenguozhao</rights>
     <entry>
         <title type="html"><![CDATA[JVM性能优化]]></title>
-        <id>http://zhenguozhao.github.io/post/RgNFkD75b/</id>
-        <link href="http://zhenguozhao.github.io/post/RgNFkD75b/">
+        <id>http://note.zhenguozhao.tech/post/RgNFkD75b/</id>
+        <link href="http://note.zhenguozhao.tech/post/RgNFkD75b/">
         </link>
         <updated>2020-03-07T16:38:47.000Z</updated>
     </entry>
