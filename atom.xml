@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <id>http://zhenguozhao.github.io</id>
+    <title>zhenguozhao</title>
+    <updated>2020-03-07T19:19:56.322Z</updated>
+    <generator>https://github.com/jpmonette/feed</generator>
+    <link rel="alternate" href="http://zhenguozhao.github.io"/>
+    <link rel="self" href="http://zhenguozhao.github.io/atom.xml"/>
+    <subtitle>温故而知新</subtitle>
+    <logo>http://zhenguozhao.github.io/images/avatar.png</logo>
+    <icon>http://zhenguozhao.github.io/favicon.ico</icon>
+    <rights>All rights reserved 2020, zhenguozhao</rights>
+    <entry>
+        <title type="html"><![CDATA[JVM性能优化]]></title>
+        <id>http://zhenguozhao.github.io/post/RgNFkD75b/</id>
+        <link href="http://zhenguozhao.github.io/post/RgNFkD75b/">
+        </link>
+        <updated>2020-03-07T16:38:47.000Z</updated>
+    </entry>
+</feed>
