@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-    <id>http://localhost:4000</id>
+    <id>http://note.zhenguozhao.tech</id>
     <title>zhenguozhao</title>
-    <updated>2020-03-09T04:20:52.687Z</updated>
+    <updated>2020-03-09T04:25:56.689Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
-    <link rel="alternate" href="http://localhost:4000"/>
-    <link rel="self" href="http://localhost:4000/atom.xml"/>
+    <link rel="alternate" href="http://note.zhenguozhao.tech"/>
+    <link rel="self" href="http://note.zhenguozhao.tech/atom.xml"/>
     <subtitle>温故而知新</subtitle>
-    <logo>http://localhost:4000/images/avatar.png</logo>
-    <icon>http://localhost:4000/favicon.ico</icon>
+    <logo>http://note.zhenguozhao.tech/images/avatar.png</logo>
+    <icon>http://note.zhenguozhao.tech/favicon.ico</icon>
     <rights>All rights reserved 2020, zhenguozhao</rights>
     <entry>
         <title type="html"><![CDATA[JVM啊啊啊啊啊啊]]></title>
-        <id>http://localhost:4000/k9gLmXo0J/</id>
-        <link href="http://localhost:4000/k9gLmXo0J/">
+        <id>http://note.zhenguozhao.tech/k9gLmXo0J/</id>
+        <link href="http://note.zhenguozhao.tech/k9gLmXo0J/">
         </link>
         <updated>2020-03-07T20:06:57.000Z</updated>
     </entry>
