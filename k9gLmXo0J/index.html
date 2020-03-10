@@ -421,6 +421,35 @@ Young GC后需要晋升的对象成功转移到老年代，代表空间分配担
     //初始化
     initImg();
   </script>
+  <script type="application/javascript" src="https://note.zhenguozhao.tech/media/scripts/valine.min.js"></script>
+  <script type="application/javascript">
+  
+    // var valine = new Valine();
+    // valine.init({
+    //   el: '#vlaine-comment',
+    //   appId: '',
+    //   appKey: '',
+    //   notify: true,
+    //   avatar: 'mp',
+    //   verify: true,
+    //   placeholder: '来都来了，不妨评论一下',
+    //   visitor: true,
+    //   highlight: true,
+    //   recordIP: true,
+    // })
+  
+    var valine = new Valine();
+    valine.init({
+      el: '#vlaine-comment',
+      appId: '',
+      appKey: '',
+      notify: false,
+      verify: false,
+      visitor: true,
+      avatar: 'mp',
+      placeholder: '加入讨论...'
+    })
+  </script>
 </body>
 
 </html>
