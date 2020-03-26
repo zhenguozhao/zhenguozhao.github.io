@@ -7,7 +7,7 @@
 <title>关于 - zhenguozhao</title>
 <link rel="shortcut icon" href="https://note.zhenguozhao.tech/favicon.ico">
 <link href="https://cdn.jsdelivr.net/npm/remixicon@2.2.0/fonts/remixicon.css" rel="stylesheet">
-<!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.7.2/animate.min.css"> -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.7.2/animate.min.css">
 <link rel="stylesheet" href="https://note.zhenguozhao.tech/media/css/tailwind.css">
 <link rel="stylesheet" href="https://note.zhenguozhao.tech/styles/main.css">
 <link rel="alternate" type="application/atom+xml" title="关于 - zhenguozhao - Atom Feed" href="https://note.zhenguozhao.tech/atom.xml">
@@ -59,37 +59,34 @@
           <p>我的文章测试</p>
 
         </div>
+        <!-- Share to Twitter, Weibo, Telegram -->
+        <div class="flex items-center">
+          <div class="mr-4 flex items-center">
+            <i class="ri-share-forward-line text-gray-500"></i>
+          </div>
+          <div class="px-4 cursor-pointer text-blue-500 hover:bg-blue-100 dark:hover:bg-gray-600 inline-flex" @click="shareToTwitter">
+            <i class="ri-twitter-line"></i>
+          </div>
+          <div class="px-4 cursor-pointer text-red-500 hover:bg-red-100 dark:hover:bg-gray-600 inline-flex" @click="shareToWeibo">
+            <i class="ri-weibo-line"></i>
+          </div>
+          <div class="px-4 cursor-pointer text-indigo-500 hover:bg-indigo-100 dark:hover:bg-gray-600 inline-flex" @click="shareToTelegram">
+            <i class="ri-telegram-line"></i>
+          </div>
+        </div>
       </div>
 
       
         
-          <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
-<script type="application/javascript" src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
-
-<div id="gitalk-container"></div>
-
-<script type="application/javascript">
-
-  var gitalk = new Gitalk({
-    clientID: 'acb78b5460c3a9f87a61',
-    clientSecret: '92b5c37719229282a87d00294a295f78ff4dd0c9',
-    repo: 'zhenguozhao.github.io',
-    owner: 'zhenguozhao',
-    admin: ['zhenguozhao'],
-    id: (location.pathname).substring(0, 49),      // Ensure uniqueness and length less than 50
-    distractionFreeMode: false  // Facebook-like distraction free mode
-  })
-
-  gitalk.render('gitalk-container')
-
-</script>
-
+          <div id="gitalk-container"></div>
         
 
         
       
 
-      <div id="vlaine-comment"></div>
+      
+        <div id="vlaine-comment"></div>
+      
 
       <footer class="py-12 text-center px-4 md:px-0" v-pre>
   
@@ -268,6 +265,47 @@
     //初始化
     initImg();
   </script>
+  
+    <script type="application/javascript" src="https://unpkg.com/valine"></script>
+<script type="application/javascript">
+  new Valine({
+    el: '#vlaine-comment',
+    appId: '',
+    appKey: '',
+    pageSize: 10,
+    notify: true,
+    avatar: 'mp',
+    verify: true,
+    placeholder: '来都来了，不妨评论一下',
+    visitor: true,
+    highlight: true,
+    recordIP: true,
+  })
+</script>
+  
+  
+    
+      <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
+<script type="application/javascript" src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+
+<script type="application/javascript">
+
+  var gitalk = new Gitalk({
+    clientID: 'acb78b5460c3a9f87a61',
+    clientSecret: '92b5c37719229282a87d00294a295f78ff4dd0c9',
+    repo: 'zhenguozhao.github.io',
+    owner: 'zhenguozhao',
+    admin: ['zhenguozhao'],
+    id: (location.pathname).substring(0, 49),      // Ensure uniqueness and length less than 50
+    distractionFreeMode: false  // Facebook-like distraction free mode
+  })
+
+  gitalk.render('gitalk-container')
+
+</script>
+
+    
+  
 </body>
 
 </html>

@@ -7,110 +7,32 @@
 <title>JDK自带的常用工具使用 - zhenguozhao</title>
 <link rel="shortcut icon" href="https://note.zhenguozhao.tech/favicon.ico">
 <link href="https://cdn.jsdelivr.net/npm/remixicon@2.2.0/fonts/remixicon.css" rel="stylesheet">
-<!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.7.2/animate.min.css"> -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.7.2/animate.min.css">
 <link rel="stylesheet" href="https://note.zhenguozhao.tech/media/css/tailwind.css">
 <link rel="stylesheet" href="https://note.zhenguozhao.tech/styles/main.css">
 <link rel="alternate" type="application/atom+xml" title="JDK自带的常用工具使用 - zhenguozhao - Atom Feed" href="https://note.zhenguozhao.tech/atom.xml">
 
     
 
-  <meta name="description" content="jps：查看当前用户下的java进程
-常用参数
-
-
-
-参数
-说明
-
-
-
-
--q
-只打印进程id
-
-
--m
-打印传入main方法的参数
-
-
--l
-打印完整包名、应用主类名、jar的完整路径
-
-
--v
-打印传递给jvm的参数
-
-
-
-常用命令
-查..." />
+  <meta name="description" content="临时退出正在交互的容器终端，而不终止
+Ctrl-p + Ctrl-q
+获取容器绑定的本地veth接口
+Docker容器启动后，会通过veth接口对连接到本地网桥，在容器中执行ip a命令，查看到本地接口的接口索引，即为连接的veth接口对。..." />
   <meta property="og:title" content="JDK自带的常用工具使用 - zhenguozhao">
-  <meta property="og:description" content="jps：查看当前用户下的java进程
-常用参数
-
-
-
-参数
-说明
-
-
-
-
--q
-只打印进程id
-
-
--m
-打印传入main方法的参数
-
-
--l
-打印完整包名、应用主类名、jar的完整路径
-
-
--v
-打印传递给jvm的参数
-
-
-
-常用命令
-查..." />
+  <meta property="og:description" content="临时退出正在交互的容器终端，而不终止
+Ctrl-p + Ctrl-q
+获取容器绑定的本地veth接口
+Docker容器启动后，会通过veth接口对连接到本地网桥，在容器中执行ip a命令，查看到本地接口的接口索引，即为连接的veth接口对。..." />
   <meta property="og:type" content="articles">
   <meta property="og:url" content="https://note.zhenguozhao.tech/RgNFkD75b/" />
   <meta property="og:image" content="https://note.zhenguozhao.tech/images/avatar.png">
   <meta property="og:image:height" content="630">
   <meta property="og:image:width" content="1200">
   <meta name="twitter:title" content="JDK自带的常用工具使用 - zhenguozhao">
-  <meta name="twitter:description" content="jps：查看当前用户下的java进程
-常用参数
-
-
-
-参数
-说明
-
-
-
-
--q
-只打印进程id
-
-
--m
-打印传入main方法的参数
-
-
--l
-打印完整包名、应用主类名、jar的完整路径
-
-
--v
-打印传递给jvm的参数
-
-
-
-常用命令
-查...">
+  <meta name="twitter:description" content="临时退出正在交互的容器终端，而不终止
+Ctrl-p + Ctrl-q
+获取容器绑定的本地veth接口
+Docker容器启动后，会通过veth接口对连接到本地网桥，在容器中执行ip a命令，查看到本地接口的接口索引，即为连接的veth接口对。...">
   <meta name="twitter:card" content="summary_large_image">
   <link rel="canonical" href="https://note.zhenguozhao.tech/RgNFkD75b/">
 
@@ -136,220 +58,49 @@
         </h1>
         
         <div class="mb-8 flex flex-wrap">
-          <div class="text-gray-400 text-sm mr-4">2020-03-08 · 3 min read</div>
+          <div class="text-gray-400 text-sm mr-4">2020-03-08 · 1 min read</div>
           
         </div>
         <div class="markdown mb-8" v-pre>
-          <h2 id="jps查看当前用户下的java进程">jps：查看当前用户下的java进程</h2>
-<h3 id="常用参数">常用参数</h3>
-<table>
-<thead>
-<tr>
-<th style="text-align:left">参数</th>
-<th style="text-align:left">说明</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:left">-q</td>
-<td style="text-align:left">只打印进程id</td>
-</tr>
-<tr>
-<td style="text-align:left">-m</td>
-<td style="text-align:left">打印传入main方法的参数</td>
-</tr>
-<tr>
-<td style="text-align:left">-l</td>
-<td style="text-align:left">打印完整包名、应用主类名、jar的完整路径</td>
-</tr>
-<tr>
-<td style="text-align:left">-v</td>
-<td style="text-align:left">打印传递给jvm的参数</td>
-</tr>
-</tbody>
-</table>
-<h3 id="常用命令">常用命令</h3>
-<p>查看当前用户下的java进程详情</p>
-<pre><code class="language-shell">jps -lvm
-</code></pre>
-<h2 id="jinfo查看java进程运行时的jvm参数">jinfo：查看java进程运行时的jvm参数</h2>
-<h3 id="常用参数-2">常用参数</h3>
-<table>
-<thead>
-<tr>
-<th style="text-align:left">参数</th>
-<th style="text-align:left">说明</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:left">-flag name</td>
-<td style="text-align:left">打印参数name的值</td>
-</tr>
-<tr>
-<td style="text-align:left">-flag [+|-]name</td>
-<td style="text-align:left">开启关闭参数name</td>
-</tr>
-<tr>
-<td style="text-align:left">-flag name=value</td>
-<td style="text-align:left">设定参数name的值为value</td>
-</tr>
-<tr>
-<td style="text-align:left">-flags</td>
-<td style="text-align:left">打印全部flag参数</td>
-</tr>
-<tr>
-<td style="text-align:left">-sysprops</td>
-<td style="text-align:left">打印系统属性</td>
-</tr>
-</tbody>
-</table>
-<h3 id="常用命令-2">常用命令</h3>
-<p>查看全部flag参数</p>
-<pre><code class="language-shell">jinfo -flags &lt;pid&gt;
-</code></pre>
-<h3 id="查看java运行时参数">查看java运行时参数</h3>
-<ul>
-<li><code>-XX:+PrintFlagsInitial</code> 打印参数初始值</li>
-<li><code>-XX:+PrintFlagsFinal</code> 打印参数最终值</li>
-<li><code>-XX:+PrintCommandLineFlags</code> 打印命令行参数</li>
-<li><code>-XX:+UnlockExperimentalVMOptions</code> 解锁实验性参数</li>
-<li><code>-XX:+UnlockDiagnosticVMOptions</code> 解锁诊断参数</li>
-</ul>
-<p>查看可管理的java运行时参数最终值</p>
-<pre><code class="language-shell">java -XX:+PrintFlagsFinal -version | grep manageable
-</code></pre>
-<h2 id="jmap查看java进程的内存情况">jmap：查看java进程的内存情况</h2>
-<h3 id="常用参数-3">常用参数</h3>
-<table>
-<thead>
-<tr>
-<th style="text-align:left">参数</th>
-<th style="text-align:left">说明</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:left">-heap</td>
-<td style="text-align:left">打印堆内存详情</td>
-</tr>
-<tr>
-<td style="text-align:left">-histo[:live]</td>
-<td style="text-align:left">打印堆内存所有的对象实例和对象大小，live只打印存活对象，为保证打印信息可靠性，该操作会<strong>暂停应用</strong>，<code>须谨慎使用</code></td>
-</tr>
-<tr>
-<td style="text-align:left">-dump:[live,]format=b,file=filename.hprof</td>
-<td style="text-align:left">导出堆内存所有对象实例到文件，live只导出存活对象，为保证导出信息可靠性，该操作会<strong>暂停应用</strong>，<code>须谨慎使用</code></td>
-</tr>
-<tr>
-<td style="text-align:left">-finalizerinfo</td>
-<td style="text-align:left">输出在等待执行finalize方法的对象</td>
-</tr>
-<tr>
-<td style="text-align:left">-clstats</td>
-<td style="text-align:left">打印java类加载器的智能统计信息</td>
-</tr>
-</tbody>
-</table>
-<blockquote>
-<p><strong>特别注明</strong>：<code>histo:live</code>和<code>dump:live</code>的过滤存活对象操作，先触发一次<strong>GC行为</strong>，再进行对应的操作，<code>须谨慎使用</code>。</p>
-</blockquote>
-<h3 id="常用命令-3">常用命令</h3>
-<pre><code class="language-shell"># 打印堆内存详情
-jmap -heap &lt;pid&gt;
+          <h1 id="临时退出正在交互的容器终端而不终止">临时退出正在交互的容器终端，而不终止</h1>
+<p><code>Ctrl-p + Ctrl-q</code></p>
+<h1 id="获取容器绑定的本地veth接口">获取容器绑定的本地veth接口</h1>
+<p>Docker容器启动后，会通过veth接口对连接到本地网桥，在容器中执行<code>ip a</code>命令，查看到本地接口的接口索引，即为连接的veth接口对。</p>
+<figure data-type="image" tabindex="1"><img src="http://md.storage.zhenguozhao.tech/6ad909f2a7fdcd7026b1ea5ebdcf7dde.png" alt="6ad909f2a7fdcd7026b1ea5ebdcf7dde.png" loading="lazy"></figure>
+<p>宿主机：</p>
+<figure data-type="image" tabindex="2"><img src="http://md.storage.zhenguozhao.tech/6fc1df6cc8a1007ba19c50e851de80c7.png" alt="6fc1df6cc8a1007ba19c50e851de80c7.png" loading="lazy"></figure>
+<p>容器：</p>
+<figure data-type="image" tabindex="3"><img src="http://md.storage.zhenguozhao.tech/dc8d3328ddb972b08113c602e44aa389.png" alt="dc8d3328ddb972b08113c602e44aa389.png" loading="lazy"></figure>
 
-# 导出堆内存所有对象实例和对象大小
-jmap -dump:format=b,file=filename.hprof &lt;pid&gt;
-</code></pre>
-<h2 id="jstat查看jvm运行状态信息">jstat：查看jvm运行状态信息</h2>
-<h3 id="常用参数-4">常用参数</h3>
-<table>
-<thead>
-<tr>
-<th style="text-align:left">参数</th>
-<th style="text-align:left">说明</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:left">-gc</td>
-<td style="text-align:left">gc信息</td>
-</tr>
-<tr>
-<td style="text-align:left">-gcutil</td>
-<td style="text-align:left">gc信息统计</td>
-</tr>
-<tr>
-<td style="text-align:left">-gccause</td>
-<td style="text-align:left">最后一次gc和原因</td>
-</tr>
-<tr>
-<td style="text-align:left">-gccapacity</td>
-<td style="text-align:left">堆内存各区大小</td>
-</tr>
-<tr>
-<td style="text-align:left">-gcnew</td>
-<td style="text-align:left">新生代信息统计</td>
-</tr>
-<tr>
-<td style="text-align:left">-gcnewcapacity</td>
-<td style="text-align:left">新生代大小</td>
-</tr>
-<tr>
-<td style="text-align:left">-gcold</td>
-<td style="text-align:left">老年代信息统计</td>
-</tr>
-<tr>
-<td style="text-align:left">-gcoldcapacity</td>
-<td style="text-align:left">老年代大小</td>
-</tr>
-<tr>
-<td style="text-align:left">-class</td>
-<td style="text-align:left">加载class数量及占用空间</td>
-</tr>
-</tbody>
-</table>
-<h3 id="常用命令-4">常用命令</h3>
-<pre><code class="language-shell">jstat -gc &lt;pid&gt; [&lt;interval&gt; [&lt;count&gt;]]
-</code></pre>
-<h2 id="参考">参考</h2>
-<ul>
-<li><a href="https://www.cnblogs.com/lujiango/p/9002270.html">Java分析工具的使用-jmap</a></li>
-<li><a href="https://www.cnblogs.com/baihuitestsoftware/articles/6408381.html">Java分析工具的使用-jstat</a></li>
-</ul>
-
+        </div>
+        <!-- Share to Twitter, Weibo, Telegram -->
+        <div class="flex items-center">
+          <div class="mr-4 flex items-center">
+            <i class="ri-share-forward-line text-gray-500"></i>
+          </div>
+          <div class="px-4 cursor-pointer text-blue-500 hover:bg-blue-100 dark:hover:bg-gray-600 inline-flex" @click="shareToTwitter">
+            <i class="ri-twitter-line"></i>
+          </div>
+          <div class="px-4 cursor-pointer text-red-500 hover:bg-red-100 dark:hover:bg-gray-600 inline-flex" @click="shareToWeibo">
+            <i class="ri-weibo-line"></i>
+          </div>
+          <div class="px-4 cursor-pointer text-indigo-500 hover:bg-indigo-100 dark:hover:bg-gray-600 inline-flex" @click="shareToTelegram">
+            <i class="ri-telegram-line"></i>
+          </div>
         </div>
       </div>
 
       
         
-          <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
-<script type="application/javascript" src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
-
-<div id="gitalk-container"></div>
-
-<script type="application/javascript">
-
-  var gitalk = new Gitalk({
-    clientID: 'acb78b5460c3a9f87a61',
-    clientSecret: '92b5c37719229282a87d00294a295f78ff4dd0c9',
-    repo: 'zhenguozhao.github.io',
-    owner: 'zhenguozhao',
-    admin: ['zhenguozhao'],
-    id: (location.pathname).substring(0, 49),      // Ensure uniqueness and length less than 50
-    distractionFreeMode: false  // Facebook-like distraction free mode
-  })
-
-  gitalk.render('gitalk-container')
-
-</script>
-
+          <div id="gitalk-container"></div>
         
 
         
       
 
-      <div id="vlaine-comment"></div>
+      
+        <div id="vlaine-comment"></div>
+      
 
       <footer class="py-12 text-center px-4 md:px-0" v-pre>
   
@@ -369,36 +120,8 @@ jmap -dump:format=b,file=filename.hprof &lt;pid&gt;
       </div>
       <div class="post-toc-container">
         <ul class="markdownIt-TOC">
-<li>
-<ul>
-<li><a href="#jps%E6%9F%A5%E7%9C%8B%E5%BD%93%E5%89%8D%E7%94%A8%E6%88%B7%E4%B8%8B%E7%9A%84java%E8%BF%9B%E7%A8%8B">jps：查看当前用户下的java进程</a>
-<ul>
-<li><a href="#%E5%B8%B8%E7%94%A8%E5%8F%82%E6%95%B0">常用参数</a></li>
-<li><a href="#%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4">常用命令</a></li>
-</ul>
-</li>
-<li><a href="#jinfo%E6%9F%A5%E7%9C%8Bjava%E8%BF%9B%E7%A8%8B%E8%BF%90%E8%A1%8C%E6%97%B6%E7%9A%84jvm%E5%8F%82%E6%95%B0">jinfo：查看java进程运行时的jvm参数</a>
-<ul>
-<li><a href="#%E5%B8%B8%E7%94%A8%E5%8F%82%E6%95%B0-2">常用参数</a></li>
-<li><a href="#%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4-2">常用命令</a></li>
-<li><a href="#%E6%9F%A5%E7%9C%8Bjava%E8%BF%90%E8%A1%8C%E6%97%B6%E5%8F%82%E6%95%B0">查看java运行时参数</a></li>
-</ul>
-</li>
-<li><a href="#jmap%E6%9F%A5%E7%9C%8Bjava%E8%BF%9B%E7%A8%8B%E7%9A%84%E5%86%85%E5%AD%98%E6%83%85%E5%86%B5">jmap：查看java进程的内存情况</a>
-<ul>
-<li><a href="#%E5%B8%B8%E7%94%A8%E5%8F%82%E6%95%B0-3">常用参数</a></li>
-<li><a href="#%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4-3">常用命令</a></li>
-</ul>
-</li>
-<li><a href="#jstat%E6%9F%A5%E7%9C%8Bjvm%E8%BF%90%E8%A1%8C%E7%8A%B6%E6%80%81%E4%BF%A1%E6%81%AF">jstat：查看jvm运行状态信息</a>
-<ul>
-<li><a href="#%E5%B8%B8%E7%94%A8%E5%8F%82%E6%95%B0-4">常用参数</a></li>
-<li><a href="#%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4-4">常用命令</a></li>
-</ul>
-</li>
-<li><a href="#%E5%8F%82%E8%80%83">参考</a></li>
-</ul>
-</li>
+<li><a href="#%E4%B8%B4%E6%97%B6%E9%80%80%E5%87%BA%E6%AD%A3%E5%9C%A8%E4%BA%A4%E4%BA%92%E7%9A%84%E5%AE%B9%E5%99%A8%E7%BB%88%E7%AB%AF%E8%80%8C%E4%B8%8D%E7%BB%88%E6%AD%A2">临时退出正在交互的容器终端，而不终止</a></li>
+<li><a href="#%E8%8E%B7%E5%8F%96%E5%AE%B9%E5%99%A8%E7%BB%91%E5%AE%9A%E7%9A%84%E6%9C%AC%E5%9C%B0veth%E6%8E%A5%E5%8F%A3">获取容器绑定的本地veth接口</a></li>
 </ul>
 
       </div>
@@ -560,6 +283,47 @@ jmap -dump:format=b,file=filename.hprof &lt;pid&gt;
     //初始化
     initImg();
   </script>
+  
+    <script type="application/javascript" src="https://unpkg.com/valine"></script>
+<script type="application/javascript">
+  new Valine({
+    el: '#vlaine-comment',
+    appId: '',
+    appKey: '',
+    pageSize: 10,
+    notify: true,
+    avatar: 'mp',
+    verify: true,
+    placeholder: '来都来了，不妨评论一下',
+    visitor: true,
+    highlight: true,
+    recordIP: true,
+  })
+</script>
+  
+  
+    
+      <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
+<script type="application/javascript" src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+
+<script type="application/javascript">
+
+  var gitalk = new Gitalk({
+    clientID: 'acb78b5460c3a9f87a61',
+    clientSecret: '92b5c37719229282a87d00294a295f78ff4dd0c9',
+    repo: 'zhenguozhao.github.io',
+    owner: 'zhenguozhao',
+    admin: ['zhenguozhao'],
+    id: (location.pathname).substring(0, 49),      // Ensure uniqueness and length less than 50
+    distractionFreeMode: false  // Facebook-like distraction free mode
+  })
+
+  gitalk.render('gitalk-container')
+
+</script>
+
+    
+  
 </body>
 
 </html>
